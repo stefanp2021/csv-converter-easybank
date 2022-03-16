@@ -37,10 +37,6 @@ MANIFEST
 *.manifest
 *.spec
 
-#Import Folder and contents
-/import
-*.csv
-
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt

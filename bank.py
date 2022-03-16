@@ -3,7 +3,9 @@ import pandas as pd
 import copy
 import os
 dirname = os.path.dirname(__file__)
-filename = os.path.join(dirname,'import\easybank-import-pt1.csv')
+filename = os.path.join(dirname,'import\EASYBANK_Umsatzliste_20220106_2150.csv')
+
+print(dirname)
 
 df_bank = pd.read_csv(filename, index_col=False, sep=";",header=None)
 df_shape = df_bank.shape
@@ -51,4 +53,4 @@ df = df.drop(["Number_before"], axis=1,errors="ignore")
 print(df.shape)
 list_sort_name_1 = ["column_0","column_1","First","Second","AT_before","AT_after","column_3","column_4","column_5","column_6","column_7"]
 df = df.reindex(columns=list_sort_name_1)
-df.to_csv("test.csv",index=False,header=True, sep=";")
+df.to_csv("bank2import.csv",index=False,header=True, sep=";")
